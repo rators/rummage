@@ -1,0 +1,1 @@
+Index.PACKAGES = {"rummage" : [{"object" : "rummage\/AkkaTimer$.html", "class" : "rummage\/AkkaTimer.html", "name" : "rummage.AkkaTimer"}, {"object" : "rummage\/JavaTimer$.html", "class" : "rummage\/JavaTimer.html", "name" : "rummage.JavaTimer"}, {"object" : "rummage\/Timer$.html", "trait" : "rummage\/Timer.html", "name" : "rummage.Timer"}]};
