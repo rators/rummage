@@ -27,12 +27,3 @@ site.includeScaladoc(".")
 ghpages.settings
 
 git.remoteRepo := "git@github.com:zmanio/rummage.git"
-
-//
-// Work-around for a bad upstream dependency.
-//
-
-ivyXML :=
-  <dependency org="org.eclipse.jetty.orbit" name="javax.servlet" rev="2.5.0.v201103041518">
-    <artifact name="javax.servlet" type="orbit" ext="jar"/>
-  </dependency>
