@@ -8,7 +8,7 @@ Currently this library contains a single utility:
 
  - [rummage.Timer](#rummagetimer): An interface for scheduling tasks to run one or more times at some point in the future.
 
-API Documentation is [available online](http://zman.io/rumamge/#rummage.package).
+API Documentation is [available online](http://zman.io/rummage/#rummage.package).
 
 See [CHANGELOG.md](CHANGELOG.md) for the project history.
 
