@@ -6,13 +6,13 @@ The rummage project consists of self-contained utilities that are too small and 
 
 Currently this library contains a single utility:
 
- - [rummage.Timer](#rummage.Timer): An interface for scheduling tasks to run one or more times at some point in the future.
+ - [rummage.Timer](#rummagetimer): An interface for scheduling tasks to run one or more times at some point in the future.
 
 API Documentation is [available online](http://zman.io/rumamge/#rummage.package).
 
 See [CHANGELOG.md](CHANGELOG.md) for the project history.
 
-[![Build Status](https://drone.io/github.com/zmanio/rummage/status.png)](https://drone.io/github.com/zmanio/rummage/latest)
+[![Build Status](https://travis-ci.org/zmanio/rummage.png?branch=master)](https://travis-ci.org/zmanio/rummage)
 
 ## Getting Started
 
