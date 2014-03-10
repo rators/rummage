@@ -20,16 +20,16 @@ Prerequisites:
 
  - JVM 1.5+
 
- - Scala 2.10+
+ - Scala 2.10.3
 
- - SBT 0.13+
+ - SBT 0.13.1
 
 First, in your shell:
 
 ```sh
 git clone https://github.com/zmanio/rummage.git rummage
 cd rummage
-sbt publishLocal # sbt 0.13+ required
+sbt publishLocal
 ```
 
 Next, in your SBT settings:
