@@ -1,7 +1,3 @@
-# zman.io/rummage
-
-A collection of small Scala utilities.
-
 The rummage project consists of self-contained utilities that are too small and general to warrant their own package and/or artifact, but are too large, nuanced or handy to have around to be re-implemented over and over again.
 
 Currently this library contains a single utility:
@@ -24,15 +20,7 @@ Prerequisites:
 
  - SBT 0.13.1
 
-First, in your shell:
-
-```sh
-git clone https://github.com/zmanio/rummage.git rummage
-cd rummage
-sbt publishLocal
-```
-
-Next, in your SBT settings:
+To use rummage in your project simply add one line to your SBT configuration:
 
 ```scala
 libraryDependencies += "io.zman" %% "rummage" % "1.0"
