@@ -1,19 +1,20 @@
 ---
 layout: page
 title: rummage
+tagline: assorted scala utils
 cover: cover.jpg
 ---
 The [rummage](http://zman.io/rummage/) project consists of self-contained [Scala](http://www.scala-lang.org/) utilities that are too small and general to warrant their own package and/or artifact, but are too large, nuanced or handy to have around to be re-implemented over and over again.
 
+
 Currently this library contains a single utility:
 
- - [rummage.Timer](#rummagetimer): An interface for scheduling tasks to run one or more times at some point in the future.
+ - [rummage.Timer](#rummage.Timer): An interface for scheduling tasks to run one or more times at some point in the future.
 
-[API Documentation](http://zman.io/rummage/api/#rummage.package) is available online.
-
-See [CHANGELOG.md](changelog/) for the project history.
+[API Documentation](http://zman.io/rummage/api/#rummage.package) - [Test Coverage](http://zman.io/rummage/tests/) - [Change Log](changelog/)
 
 [![Build Status](https://travis-ci.org/zmanio/rummage.png?branch=master)](https://travis-ci.org/zmanio/rummage)
+
 
 ## Getting Started
 
@@ -21,9 +22,7 @@ Prerequisites:
 
  - JVM 1.5+
 
- - Scala 2.10.3
-
- - SBT 0.13.1
+ - Scala 2.10.3+
 
 To use rummage in your project simply add one line to your SBT configuration:
 
@@ -31,7 +30,9 @@ To use rummage in your project simply add one line to your SBT configuration:
 libraryDependencies += "io.zman" %% "rummage" % "1.0"
 ```
 
-## rummage.Timer
+[Instructions for other build systems](http://mvnrepository.com/artifact/io.zman/rummage_2.10/1.0).
+
+## <a name="rummage.Timer"></a> rummage.Timer
 
 An interface for scheduling tasks to run one or more times at some point in the future.
 

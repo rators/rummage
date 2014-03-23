@@ -1,6 +1,6 @@
 ---
 layout: page
-title: rummage changelog
+title: rummage history
 cover: cover.jpg
 ---
 ## 1.0 (2014-03-08)
