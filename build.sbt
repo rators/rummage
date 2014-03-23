@@ -1,6 +1,7 @@
 import de.johoop.jacoco4sbt._
 import JacocoPlugin._
 import SiteKeys._
+import GhPagesKeys._
 import SonatypeKeys._
 
 //
@@ -50,6 +51,8 @@ siteMappings <++= (jacoco.outputDirectory in jacoco.Config) map (_ / "html") map
 }
 
 ghpages.settings
+
+ghpagesNoJekyll := false
 
 git.remoteRepo := "git@github.com:zmanio/rummage.git"
 
