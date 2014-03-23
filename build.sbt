@@ -45,6 +45,10 @@ includeFilter in makeSite := "*.html" | "*.css" | "*.png" | "*.jpg" | "*.gif" | 
 
 site.includeScaladoc("api")
 
+siteMappings <++= (jacoco.outputDirectory in jacoco.Config) map (_ / "html") map { dir =>
+  (dir.***) pair relativeTo(dir.getParentFile) map { case (f, p) => f -> p.replaceAll("^html", "tests") }
+}
+
 ghpages.settings
 
 git.remoteRepo := "git@github.com:zmanio/rummage.git"
