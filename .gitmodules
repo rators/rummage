@@ -1,0 +1,3 @@
+[submodule "src/site/_zman.io"]
+	path = src/site/_zman.io
+	url = https://github.com/zmanio/zman.io.git

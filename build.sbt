@@ -1,5 +1,6 @@
 import de.johoop.jacoco4sbt._
 import JacocoPlugin._
+import SiteKeys._
 import SonatypeKeys._
 
 //
@@ -40,7 +41,9 @@ jacoco.settings
 
 site.settings
 
-site.includeScaladoc(".")
+includeFilter in makeSite := "*.html" | "*.css" | "*.png" | "*.jpg" | "*.gif" | "*.js" | "*.md" | "*.yml" | "*.yfm"
+
+site.includeScaladoc("api")
 
 ghpages.settings
 
