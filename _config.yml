@@ -2,3 +2,4 @@ name: zman.io
 markdown: redcarpet
 pygments: true
 layouts: ./_zman.io/_layouts
+include: ['tests/.resources/', 'tests/.sessions.html']
