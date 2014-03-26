@@ -5,9 +5,9 @@ Currently this library contains a single utility:
 
  - [rummage.Timer](#rummage.Timer): An interface for scheduling tasks to run one or more times at some point in the future.
 
-[API Documentation](http://zman.io/rummage/api/#rummage.package) - [Test Coverage](http://zman.io/rummage/tests/) - [Change Log](changelog/)
+[API Documentation](http://zman.io/rummage/api/#rummage.package) - [Change Log](changelog/)
 
-[![Build Status](https://travis-ci.org/zmanio/rummage.png?branch=master)](https://travis-ci.org/zmanio/rummage)
+[![Build Status](https://travis-ci.org/zmanio/rummage.png?branch=master)](https://travis-ci.org/zmanio/rummage) [![Coverage Status](https://coveralls.io/repos/zmanio/rummage/badge.png)](https://coveralls.io/r/zmanio/rummage)
 
 
 ## Getting Started

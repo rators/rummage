@@ -1,6 +1,14 @@
 language: scala
+
 scala:
   - 2.10.3
+
+branches:
+  only:
+    - master
+
+script: "sbt coveralls"
+
 notifications:
   email:
     - z@zman.io

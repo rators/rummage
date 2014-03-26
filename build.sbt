@@ -1,5 +1,3 @@
-import de.johoop.jacoco4sbt._
-import JacocoPlugin._
 import SiteKeys._
 import GhPagesKeys._
 import SonatypeKeys._
@@ -14,7 +12,7 @@ version := "1.0"
 
 description := "A collection of small Scala utilities."
 
-homepage := Some(url("http://zman.io/rummage"))
+homepage := Some(url("http://zman.io/rummage/"))
 
 startYear := Some(2014)
 
@@ -22,7 +20,7 @@ organization := "io.zman"
 
 organizationName := "zman.io"
 
-organizationHomepage := Some(url("http://zman.io"))
+organizationHomepage := Some(url("http://zman.io/"))
 
 scalaVersion := "2.10.3"
 
@@ -34,7 +32,9 @@ libraryDependencies ++= Seq(
 
 licenses := Seq("The Apache Software License, Version 2.0" -> url("http://www.apache.org/licenses/LICENSE-2.0.txt"))
 
-jacoco.settings
+ScoverageSbtPlugin.instrumentSettings
+
+CoverallsPlugin.coverallsSettings
 
 //
 // Documentation site generation.
@@ -42,13 +42,9 @@ jacoco.settings
 
 site.settings
 
-includeFilter in makeSite := "*.html" | "*.css" | "*.png" | "*.jpg" | "*.gif" | "*.js" | "*.md" | "*.yml" | "*.yfm"
+includeFilter in makeSite := "*.html" | "*.css" | "*.png" | "*.jpg" | "*.gif" | "*.js" | "*.md" | "*.yml"
 
 site.includeScaladoc("api")
-
-siteMappings <++= (jacoco.outputDirectory in jacoco.Config) map (_ / "html") map { dir =>
-  (dir.***) pair relativeTo(dir.getParentFile) map { case (f, p) => f -> p.replaceAll("^html", "tests") }
-}
 
 ghpages.settings
 
