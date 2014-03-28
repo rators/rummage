@@ -1,4 +1,5 @@
 name: zman.io
+rss: rummage.xml
 markdown: redcarpet
 pygments: true
 layouts: ./_zman.io/_layouts
