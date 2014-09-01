@@ -53,7 +53,7 @@ readmeMappings ++= Seq(
   "." --- Seq(
     "title"   -> "rummage",
     "tagline" -> "assorted scala utilities",
-    "layout"  -> "page",
+    "layout"  -> "home",
     "cover"   -> "rummage.jpg"
   ),
   "changelog" --- Seq(
