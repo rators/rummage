@@ -1,5 +1,6 @@
 import SiteKeys._
-import GhPagesKeys._
+import GhReadmeKeys._
+import GhPagesKeys.ghpagesNoJekyll
 import SonatypeKeys._
 
 //
@@ -46,11 +47,27 @@ includeFilter in makeSite := "*.html" | "*.css" | "*.png" | "*.jpg" | "*.gif" | 
 
 site.includeScaladoc("api")
 
+ghreadme.settings
+
+readmeMappings ++= Seq(
+  "." --- Seq(
+    "title"   -> "rummage",
+    "tagline" -> "assorted scala utilities",
+    "layout"  -> "page",
+    "cover"   -> "rummage.jpg"
+  ),
+  "changelog" --- Seq(
+    "title"   -> "rummage history",
+    "layout"  -> "page",
+    "cover"   -> "rummage.jpg"
+  )
+)
+
 ghpages.settings
 
 ghpagesNoJekyll := false
 
-git.remoteRepo := "git@github.com:zmanio/rummage.git"
+git.remoteRepo := "https://${sys.env("GH_TOKEN")}@github.com:zmanio/rummage.git"
 
 //
 // Publishing to Sonatype
