@@ -1,4 +1,4 @@
-title:         zman.io/rummage
+title:         zman.io
 description:   assorted scala utilities
 logo:          logo.png
 default_bg:    rummage.jpg
@@ -11,18 +11,4 @@ paginate:      7
 paginate_path: "page:num"
 future:        false
 pygments:      true
-markdown:      kramdown
-
-kramdown:
-  auto_ids: true
-  footnote_nr: 1
-  entity_output: as_char
-  toc_levels: 1..6
-  use_coderay: false
-
-  coderay:
-    coderay_line_numbers: 
-    coderay_line_numbers_start: 1
-    coderay_tab_width: 2
-    coderay_bold_every: 10
-    coderay_css: class
+markdown:      redcarpet
