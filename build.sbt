@@ -67,7 +67,7 @@ ghpages.settings
 
 ghpagesNoJekyll := false
 
-git.remoteRepo := "https://${sys.env("GH_TOKEN")}@github.com:zmanio/rummage.git"
+git.remoteRepo := s"https://${sys.env.get("GH_TOKEN").map(_ + "@").getOrElse("")}github.com:zmanio/rummage.git"
 
 //
 // Publishing to Sonatype
