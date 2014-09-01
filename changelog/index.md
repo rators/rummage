@@ -1,5 +1,6 @@
 ---
 title: rummage history
+headline: a historical record of occasionally rummaging around
 layout: page
 cover: rummage.jpg
 ---
