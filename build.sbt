@@ -51,15 +51,16 @@ ghreadme.settings
 
 readmeMappings ++= Seq(
   "." --- Seq(
-    "title"   -> "rummage",
-    "tagline" -> "assorted scala utilities",
-    "layout"  -> "home",
-    "cover"   -> "rummage.jpg"
+    "title"    -> "rummage",
+    "headline" -> "everyone has a utility library, this is mine",
+    "layout"   -> "home",
+    "cover"    -> "rummage.jpg"
   ),
   "changelog" --- Seq(
-    "title"   -> "rummage history",
-    "layout"  -> "page",
-    "cover"   -> "rummage.jpg"
+    "title"    -> "rummage history",
+    "headline" -> "a historical record of occasionally rummaging around",
+    "layout"   -> "page",
+    "cover"    -> "rummage.jpg"
   )
 )
 
