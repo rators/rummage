@@ -11,10 +11,8 @@ before_script:
   - git config --global user.email "z@zman.io"
   - git config --global user.name "zmanio-ci"
   - git config --global push.default simple
-  - git config credential.helper "store --file=.git/credentials"
-  - echo "https://${GH_TOKEN}:@github.com" > .git/credentials
   
-script: sbt ++$TRAVIS_SCALA_VERSION coveralls ghpages-push-site
+script: sbt ++$TRAVIS_SCALA_VERSION --warn coveralls ghpages-push-site
 
 notifications:
   email:
