@@ -1,7 +1,7 @@
 ---
-layout: page
 title: rummage history
-cover: cover.jpg
+layout: page
+cover: rummage.jpg
 ---
 ## 1.0 (2014-03-08)
 

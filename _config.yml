@@ -1,6 +1,28 @@
-name: zman.io
-rss: rummage.xml
-markdown: redcarpet
-pygments: true
-layouts: ./_zman.io/_layouts
-include: ['./tests/.resources/*', './tests/.sessions.html']
+title:         zman.io/rummage
+description:   assorted scala utilities
+logo:          logo.png
+default_bg:    rummage.jpg
+layouts:       ./_includes/_layouts
+url:           "http://zman.io"
+    
+timezone:      America/Denver
+permalink:     /posts/:categories/:title
+paginate:      7
+paginate_path: "page:num"
+future:        false
+pygments:      true
+markdown:      kramdown
+
+kramdown:
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  use_coderay: false
+
+  coderay:
+    coderay_line_numbers: 
+    coderay_line_numbers_start: 1
+    coderay_tab_width: 2
+    coderay_bold_every: 10
+    coderay_css: class
