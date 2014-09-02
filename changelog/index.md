@@ -1,5 +1,5 @@
 ---
-title: rummage history
+title: changelog
 headline: a historical record of rummaging around
 layout: page
 ---

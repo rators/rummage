@@ -1,5 +1,5 @@
 ---
-title: rummage
+title: about
 headline: one-off scala utilities and tools
 layout: home
 ---

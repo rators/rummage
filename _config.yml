@@ -3,7 +3,7 @@ description:   one-off scala utilities and tools
 logo:          logo.png
 default_bg:    rummage.jpg
 layouts:       ./_includes/_layouts
-url:           "http://zman.io"
+url:           "http://zman.io/rummage"
     
 timezone:      America/Denver
 permalink:     /posts/:categories/:title
