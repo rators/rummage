@@ -5,10 +5,7 @@ layout: home
 ---
 A [Scala](http://www.scala-lang.org/) library that contains utilities that are too small and general to warrant their own package and/or artifact, but are too large, nuanced or handy to have around to be re-implemented over and over again.
 
-
-Currently this library contains a single utility:
-
- - [rummage.Timer](#rummage.Timer): An interface for scheduling tasks to run one or more times at some point in the future.
+This project currently contains only a flexible timer abstraction for scheduling delayed and repeating tasks.
 
 [source](https://github.com/zmanio/rummage) - [documentation](http://zman.io/rummage/api/#rummage.package) - [changelog](changelog/)
 
