@@ -11,7 +11,7 @@ name := "rummage"
 
 version := "1.0"
 
-description := "A collection of small Scala utilities."
+description := "One-off Scala utilities and tools."
 
 homepage := Some(url("http://zman.io/rummage/"))
 
@@ -52,15 +52,13 @@ ghreadme.settings
 readmeMappings ++= Seq(
   "." --- Seq(
     "title"    -> "rummage",
-    "headline" -> "everyone has a utility library, this is mine",
-    "layout"   -> "home",
-    "cover"    -> "rummage.jpg"
+    "headline" -> "one-off scala utilities and tools",
+    "layout"   -> "home"
   ),
   "changelog" --- Seq(
     "title"    -> "rummage history",
-    "headline" -> "a historical record of occasionally rummaging around",
-    "layout"   -> "page",
-    "cover"    -> "rummage.jpg"
+    "headline" -> "a historical record of rummaging around",
+    "layout"   -> "page"
   )
 )
 
