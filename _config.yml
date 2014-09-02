@@ -1,5 +1,5 @@
-title:         zman.io
-description:   assorted scala utilities
+title:         rummage
+description:   one-off scala utilities and tools
 logo:          logo.png
 default_bg:    rummage.jpg
 layouts:       ./_includes/_layouts

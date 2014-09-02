@@ -1,12 +1,9 @@
 ---
 title: rummage
-headline: everyone has a utility library, this is mine
+headline: one-off scala utilities and tools
 layout: home
-cover: rummage.jpg
 ---
-#Rummage
-
-The [rummage](http://zman.io/rummage/) project consists of self-contained [Scala](http://www.scala-lang.org/) utilities that are too small and general to warrant their own package and/or artifact, but are too large, nuanced or handy to have around to be re-implemented over and over again.
+A [Scala](http://www.scala-lang.org/) library that contains utilities that are too small and general to warrant their own package and/or artifact, but are too large, nuanced or handy to have around to be re-implemented over and over again.
 
 
 Currently this library contains a single utility:
