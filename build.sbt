@@ -9,7 +9,7 @@ import SonatypeKeys._
 
 name := "rummage"
 
-version := "1.1-SNAPSHOT"
+version := "1.1"
 
 description := "One-off Scala utilities and tools."
 
