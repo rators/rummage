@@ -27,6 +27,7 @@ import akka.actor.{ ActorSystem, Cancellable, Scheduler }
 /**
  * An interface for scheduling tasks to run one or more times at some point in the future.
  */
+@deprecated("Timers are replaced by the Clock API", "1.1")
 trait Timer {
 
   import Timer.Task
@@ -101,6 +102,7 @@ trait Timer {
  * This object publishes an implicit, lazily-initialized, global timer backed by a single daemon thread. It
  * additionally implements `Timer` itself and forwards all task submissions to the aforementioned global timer.
  */
+@deprecated("Timers are replaced by the Clock API", "1.1")
 object Timer extends Timer {
 
   /** The default global timer backed by a single thread. */
@@ -137,6 +139,7 @@ object Timer extends Timer {
  *
  * @param executor The `ScheduledExecutorService` instance to view as a timer.
  */
+@deprecated("Timers are replaced by the Clock API", "1.1")
 final class JavaTimer(executor: ScheduledExecutorService) extends Timer {
   def submit(delay: FiniteDuration, interval: Option[FiniteDuration], f: () => Unit)(implicit ec: ExecutionContext) = {
     @volatile var handle = None: Option[ScheduledFuture[_]]
@@ -157,6 +160,7 @@ final class JavaTimer(executor: ScheduledExecutorService) extends Timer {
 /**
  * Factory for timers implemented with a Java `ScheduledExecutorService`.
  */
+@deprecated("Timers are replaced by the Clock API", "1.1")
 object JavaTimer {
 
   /**
@@ -173,6 +177,7 @@ object JavaTimer {
  *
  * @param scheduler The `Scheduler` instance to view as a timer.
  */
+@deprecated("Timers are replaced by the Clock API", "1.1")
 final class AkkaTimer(scheduler: Scheduler) extends Timer {
   def submit(delay: FiniteDuration, interval: Option[FiniteDuration], f: () => Unit)(implicit ec: ExecutionContext) = {
     @volatile var handle = None: Option[Cancellable]
@@ -192,6 +197,7 @@ final class AkkaTimer(scheduler: Scheduler) extends Timer {
 /**
  * Factory for timers implemented with an Akka `Scheduler`.
  */
+@deprecated("Timers are replaced by the Clock API", "1.1")
 object AkkaTimer {
 
   /**
