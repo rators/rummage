@@ -83,7 +83,59 @@ artifact, but are too large, nuanced or handy to have around to be re-implemente
 
         <div id="types" class="types members">
               <h3>Type Members</h3>
-              <ol><li name="rummage.AkkaTimer" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+              <ol><li name="rummage.AkkaClock" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="AkkaClockextendsClock.SystemTimewithClock.SyncWaitBySleepingwithAkkaClock.AsyncWaitWithAkkaSchedulerwithProductwithSerializable"></a>
+      <a id="AkkaClock:AkkaClock"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="AkkaClock.html"><span class="name">AkkaClock</span></a><span class="params">(<span name="akkaScheduler">akkaScheduler: <span class="extype" name="akka.actor.Scheduler">Scheduler</span></span>)</span><span class="result"> extends <a href="Clock$$SystemTime.html" class="extype" name="rummage.Clock.SystemTime">SystemTime</a> with <a href="Clock$$SyncWaitBySleeping.html" class="extype" name="rummage.Clock.SyncWaitBySleeping">SyncWaitBySleeping</a> with <a href="AkkaClock$$AsyncWaitWithAkkaScheduler.html" class="extype" name="rummage.AkkaClock.AsyncWaitWithAkkaScheduler">AsyncWaitWithAkkaScheduler</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">A clock for use in Akka actors, using system time and Thread.</p>
+    </li><li name="rummage.AkkaClocks" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="AkkaClocksextendsAnyRef"></a>
+      <a id="AkkaClocks:AkkaClocks"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="AkkaClocks.html"><span class="name">AkkaClocks</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">A trait that defines when an implicit Akka clock is available.</p>
+    </li><li name="rummage.Clock" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="ClockextendsAnyRef"></a>
+      <a id="Clock:Clock"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Clock.html"><span class="name">Clock</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">A low-level abstraction over time.</p>
+    </li><li name="rummage.ScaledClock" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ScaledClockextendsClockwithProductwithSerializable"></a>
+      <a id="ScaledClock:ScaledClock"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="ScaledClock.html"><span class="name">ScaledClock</span></a><span class="params">(<span name="factor">factor: <span class="extype" name="scala.Double">Double</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="clock">clock: <a href="Clock.html" class="extype" name="rummage.Clock">Clock</a></span>)</span><span class="result"> extends <a href="Clock.html" class="extype" name="rummage.Clock">Clock</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">A clock that scales the progression of time reported by another clock.</p>
+    </li><li name="rummage.AkkaTimer" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="AkkaTimerextendsTimer"></a>
       <a id="AkkaTimer:AkkaTimer"></a>
       <h4 class="signature">
@@ -92,7 +144,7 @@ artifact, but are too large, nuanced or handy to have around to be re-implemente
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="AkkaTimer.html"><span class="name">AkkaTimer</span></a><span class="result"> extends <a href="Timer.html" class="extype" name="rummage.Timer">Timer</a></span>
+        <a href="AkkaTimer.html"><span class="name deprecated" title="Deprecated: (Since version 1.1) Timers are replaced by the Clock API">AkkaTimer</span></a><span class="result"> extends <a href="Timer.html" class="extype" name="rummage.Timer">Timer</a></span>
       </span>
       </h4>
       <p class="comment cmt">A timer implemented with an Akka <code>Scheduler</code>.</p>
@@ -105,7 +157,7 @@ artifact, but are too large, nuanced or handy to have around to be re-implemente
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="JavaTimer.html"><span class="name">JavaTimer</span></a><span class="result"> extends <a href="Timer.html" class="extype" name="rummage.Timer">Timer</a></span>
+        <a href="JavaTimer.html"><span class="name deprecated" title="Deprecated: (Since version 1.1) Timers are replaced by the Clock API">JavaTimer</span></a><span class="result"> extends <a href="Timer.html" class="extype" name="rummage.Timer">Timer</a></span>
       </span>
       </h4>
       <p class="comment cmt">A timer implemented with a Java <code>ScheduledExecutorService</code>.</p>
@@ -118,7 +170,7 @@ artifact, but are too large, nuanced or handy to have around to be re-implemente
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a href="Timer.html"><span class="name">Timer</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+        <a href="Timer.html"><span class="name deprecated" title="Deprecated: (Since version 1.1) Timers are replaced by the Clock API">Timer</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
       </span>
       </h4>
       <p class="comment cmt">An interface for scheduling tasks to run one or more times at some point in the future.</p>
@@ -129,6 +181,78 @@ artifact, but are too large, nuanced or handy to have around to be re-implemente
 
         <div id="values" class="values members">
               <h3>Value Members</h3>
+              <ol><li name="rummage.AkkaClock" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="AkkaClock"></a>
+      <a id="AkkaClock:AkkaClock"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="AkkaClock$.html"><span class="name">AkkaClock</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Support for the <code>AkkaClock</code> class.</p>
+    </li><li name="rummage.AkkaClocks" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="AkkaClocks"></a>
+      <a id="AkkaClocks:AkkaClocks"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="AkkaClocks$.html"><span class="name">AkkaClocks</span></a><span class="result"> extends <a href="AkkaClocks.html" class="extype" name="rummage.AkkaClocks">AkkaClocks</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Global access to the implicit Akka clock publisher.</p>
+    </li><li name="rummage.Clock" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Clock"></a>
+      <a id="Clock:Clock"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Clock$.html"><span class="name">Clock</span></a>
+      </span>
+      </h4>
+      <p class="comment cmt">Primary factory and resolver for instances of <code>Clock</code>.</p>
+    </li><li name="rummage.ScaledClock" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ScaledClock"></a>
+      <a id="ScaledClock:ScaledClock"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="ScaledClock$.html"><span class="name">ScaledClock</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">A factory for scaled clocks.</p>
+    </li><li name="rummage.TryAll" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="TryAll"></a>
+      <a id="TryAll:TryAll"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="TryAll$.html"><span class="name">TryAll</span></a>
+      </span>
+      </h4>
+      <p class="comment cmt">An extension to the <code>scala.util.Try</code> interface to support aggregated try operations.</p>
+    </li></ol>
+            </div>
+
+        
+
+        <div id="values" class="values members">
+              <h3>Deprecated Value Members</h3>
               <ol><li name="rummage.AkkaTimer" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="AkkaTimer"></a>
       <a id="AkkaTimer:AkkaTimer"></a>
@@ -138,7 +262,7 @@ artifact, but are too large, nuanced or handy to have around to be re-implemente
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a href="AkkaTimer$.html"><span class="name">AkkaTimer</span></a>
+        <a href="AkkaTimer$.html"><span class="name deprecated" title="Deprecated: (Since version 1.1) Timers are replaced by the Clock API">AkkaTimer</span></a>
       </span>
       </h4>
       <p class="comment cmt">Factory for timers implemented with an Akka <code>Scheduler</code>.</p>
@@ -151,7 +275,7 @@ artifact, but are too large, nuanced or handy to have around to be re-implemente
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a href="JavaTimer$.html"><span class="name">JavaTimer</span></a>
+        <a href="JavaTimer$.html"><span class="name deprecated" title="Deprecated: (Since version 1.1) Timers are replaced by the Clock API">JavaTimer</span></a>
       </span>
       </h4>
       <p class="comment cmt">Factory for timers implemented with a Java <code>ScheduledExecutorService</code>.</p>
@@ -164,16 +288,12 @@ artifact, but are too large, nuanced or handy to have around to be re-implemente
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a href="Timer$.html"><span class="name">Timer</span></a><span class="result"> extends <a href="Timer.html" class="extype" name="rummage.Timer">Timer</a></span>
+        <a href="Timer$.html"><span class="name deprecated" title="Deprecated: (Since version 1.1) Timers are replaced by the Clock API">Timer</span></a><span class="result"> extends <a href="Timer.html" class="extype" name="rummage.Timer">Timer</a></span>
       </span>
       </h4>
       <p class="comment cmt">Definitions associated with timers as well as the infrastructure for publishing the global implicit timer.</p>
     </li></ol>
             </div>
-
-        
-
-        
         </div>
 
         <div id="inheritedMembers">

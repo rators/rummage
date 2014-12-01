@@ -2,9 +2,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html>
         <head>
-          <title>JavaTimer - rummage.JavaTimer</title>
-          <meta name="description" content="JavaTimer - rummage.JavaTimer" />
-          <meta name="keywords" content="JavaTimer rummage.JavaTimer" />
+          <title>AkkaClock - rummage.AkkaClock</title>
+          <meta name="description" content="AkkaClock - rummage.AkkaClock" />
+          <meta name="keywords" content="AkkaClock rummage.AkkaClock" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link href="../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
@@ -12,7 +12,7 @@
       <script type="text/javascript">
          if(top === self) {
             var url = '../index.html';
-            var hash = 'rummage.JavaTimer';
+            var hash = 'rummage.AkkaClock';
             var anchor = window.location.hash;
             var anchor_opt = '';
             if (anchor.length >= 1)
@@ -24,28 +24,27 @@
         </head>
         <body class="type">
       <div id="definition">
-        <a href="JavaTimer$.html" title="Go to companion"><img src="../lib/class_to_object_big.png" /></a>
+        <a href="AkkaClock$.html" title="Go to companion"><img src="../lib/class_to_object_big.png" /></a>
         <p id="owner"><a href="package.html" class="extype" name="rummage">rummage</a></p>
-        <h1><a href="JavaTimer$.html" title="Go to companion">JavaTimer</a></h1>
+        <h1><a href="AkkaClock$.html" title="Go to companion">AkkaClock</a></h1>
       </div>
 
       <h4 id="signature" class="signature">
       <span class="modifier_kind">
-        <span class="modifier">final </span>
-        <span class="kind">class</span>
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <span class="name deprecated" title="Deprecated: (Since version 1.1) Timers are replaced by the Clock API">JavaTimer</span><span class="result"> extends <a href="Timer.html" class="extype" name="rummage.Timer">Timer</a></span>
+        <span class="name">AkkaClock</span><span class="params">(<span name="akkaScheduler">akkaScheduler: <span class="extype" name="akka.actor.Scheduler">Scheduler</span></span>)</span><span class="result"> extends <a href="Clock$$SystemTime.html" class="extype" name="rummage.Clock.SystemTime">SystemTime</a> with <a href="Clock$$SyncWaitBySleeping.html" class="extype" name="rummage.Clock.SyncWaitBySleeping">SyncWaitBySleeping</a> with <a href="AkkaClock$$AsyncWaitWithAkkaScheduler.html" class="extype" name="rummage.AkkaClock.AsyncWaitWithAkkaScheduler">AsyncWaitWithAkkaScheduler</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>A timer implemented with a Java <code>ScheduledExecutorService</code>.
-</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
-                <span class="name">@deprecated</span>
-              
-        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 1.1)</i> Timers are replaced by the Clock API</p></dd></dl><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>A clock for use in Akka actors, using system time and Thread.sleep()<code> for synchronous waiting, but using an Akka
+<code>Scheduler</code> for asynchronous waiting.
+</code></p></div><dl class="paramcmts block"><dt class="param">akkaScheduler</dt><dd class="cmt"><p>The Akka scheduler to use.
+</p></dd></dl><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><a href="Timer.html" class="extype" name="rummage.Timer">Timer</a>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+          <div class="superTypes hiddenContent"><span class="extype" name="scala.Serializable">Serializable</span>, <span class="extype" name="java.io.Serializable">Serializable</span>, <span class="extype" name="scala.Product">Product</span>, <span class="extype" name="scala.Equals">Equals</span>, <a href="AkkaClock$$AsyncWaitWithAkkaScheduler.html" class="extype" name="rummage.AkkaClock.AsyncWaitWithAkkaScheduler">AsyncWaitWithAkkaScheduler</a>, <a href="Clock$$SyncWaitBySleeping.html" class="extype" name="rummage.Clock.SyncWaitBySleeping">SyncWaitBySleeping</a>, <a href="Clock$$SystemTime.html" class="extype" name="rummage.Clock.SystemTime">SystemTime</a>, <a href="Clock.html" class="extype" name="rummage.Clock">Clock</a>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
         
 
@@ -63,7 +62,7 @@
                 <span class="filtertype">Inherited<br />
                 </span>
                 <ol id="linearization">
-                  <li class="in" name="rummage.JavaTimer"><span>JavaTimer</span></li><li class="in" name="rummage.Timer"><span>Timer</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  <li class="in" name="rummage.AkkaClock"><span>AkkaClock</span></li><li class="in" name="scala.Serializable"><span>Serializable</span></li><li class="in" name="java.io.Serializable"><span>Serializable</span></li><li class="in" name="scala.Product"><span>Product</span></li><li class="in" name="scala.Equals"><span>Equals</span></li><li class="in" name="rummage.AkkaClock.AsyncWaitWithAkkaScheduler"><span>AsyncWaitWithAkkaScheduler</span></li><li class="in" name="rummage.Clock.SyncWaitBySleeping"><span>SyncWaitBySleeping</span></li><li class="in" name="rummage.Clock.SystemTime"><span>SystemTime</span></li><li class="in" name="rummage.Clock"><span>Clock</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                 </ol>
               </div><div id="ancestors">
             <span class="filtertype"></span>
@@ -83,40 +82,24 @@
         <div id="allMembers">
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
-              <ol><li name="rummage.JavaTimer#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="&lt;init&gt;(executor:java.util.concurrent.ScheduledExecutorService):rummage.JavaTimer"></a>
-      <a id="&lt;init&gt;:JavaTimer"></a>
+              <ol><li name="rummage.AkkaClock#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="&lt;init&gt;(akkaScheduler:akka.actor.Scheduler):rummage.AkkaClock"></a>
+      <a id="&lt;init&gt;:AkkaClock"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">JavaTimer</span><span class="params">(<span name="executor">executor: <span class="extype" name="java.util.concurrent.ScheduledExecutorService">ScheduledExecutorService</span></span>)</span>
+        <span class="name">AkkaClock</span><span class="params">(<span name="akkaScheduler">akkaScheduler: <span class="extype" name="akka.actor.Scheduler">Scheduler</span></span>)</span>
       </span>
       </h4>
-      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">executor</dt><dd class="cmt"><p>The <code>ScheduledExecutorService</code> instance to view as a timer.
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">akkaScheduler</dt><dd class="cmt"><p>The Akka scheduler to use.
 </p></dd></dl></div>
     </li></ol>
             </div>
 
-        <div id="types" class="types members">
-              <h3>Type Members</h3>
-              <ol><li name="rummage.Timer.Builder" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="BuilderextendsAnyRef"></a>
-      <a id="Builder:Builder"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">final </span>
-        <span class="kind">class</span>
-      </span>
-      <span class="symbol">
-        <a href="Timer$Builder.html"><span class="name">Builder</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
-      </span>
-      </h4>
-      <p class="comment cmt">A secondary interface for building tasks that fire after an initial delay.</p>
-    </li></ol>
-            </div>
+        
 
         
 
@@ -187,21 +170,20 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li name="rummage.Timer#after" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="after(delay:scala.concurrent.duration.FiniteDuration):Timer.this.Builder"></a>
-      <a id="after(FiniteDuration):Builder"></a>
+    </li><li name="rummage.AkkaClock#akkaScheduler" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="akkaScheduler:akka.actor.Scheduler"></a>
+      <a id="akkaScheduler:Scheduler"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
-        <span class="kind">def</span>
+        <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">after</span><span class="params">(<span name="delay">delay: <span class="extype" name="scala.concurrent.duration.FiniteDuration">FiniteDuration</span></span>)</span><span class="result">: <a href="#BuilderextendsAnyRef" class="extmbr" name="rummage.Timer.Builder">Builder</a></span>
+        <span class="name">akkaScheduler</span><span class="result">: <span class="extype" name="akka.actor.Scheduler">Scheduler</span></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Creates a builder capable of building timers that perform a task once or repeatedly after the specified delay.</p><div class="fullcomment"><div class="comment cmt"><p>Creates a builder capable of building timers that perform a task once or repeatedly after the specified delay.
-</p></div><dl class="paramcmts block"><dt class="param">delay</dt><dd class="cmt"><p>The amount of time to wait before performing the task for the first time.
-</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Timer.html" class="extype" name="rummage.Timer">Timer</a></dd></dl></div>
+      <p class="shortcomment cmt">The Akka scheduler to use.</p><div class="fullcomment"><div class="comment cmt"><p>The Akka scheduler to use.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="rummage.AkkaClock">AkkaClock</a> → <a href="AkkaClock$$AsyncWaitWithAkkaScheduler.html" class="extype" name="rummage.AkkaClock.AsyncWaitWithAkkaScheduler">AsyncWaitWithAkkaScheduler</a></dd></dl></div>
     </li><li name="scala.Any#asInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
       <a id="asInstanceOf[T0]:T0"></a>
@@ -215,6 +197,21 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="rummage.AkkaClock.AsyncWaitWithAkkaScheduler#asyncWait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="asyncWait(timeout:scala.concurrent.duration.FiniteDuration)(implicitec:scala.concurrent.ExecutionContext):scala.concurrent.Future[scala.concurrent.duration.FiniteDuration]"></a>
+      <a id="asyncWait(FiniteDuration)(ExecutionContext):Future[FiniteDuration]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">asyncWait</span><span class="params">(<span name="timeout">timeout: <span class="extype" name="scala.concurrent.duration.FiniteDuration">FiniteDuration</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="ec">ec: <span class="extype" name="scala.concurrent.ExecutionContext">ExecutionContext</span></span>)</span><span class="result">: <span class="extype" name="scala.concurrent.Future">Future</span>[<span class="extype" name="scala.concurrent.duration.FiniteDuration">FiniteDuration</span>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Returns a future that completes after the specified duration has elapsed or if an error is encountered.</p><div class="fullcomment"><div class="comment cmt"><p>Returns a future that completes after the specified duration has elapsed or if an error is encountered.
+</p></div><dl class="paramcmts block"><dt class="param">timeout</dt><dd class="cmt"><p>The amount of time that must pass before the returned future completes.</p></dd><dt class="param">ec</dt><dd class="cmt"><p>The execution context to perform wait operations with.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="AkkaClock$$AsyncWaitWithAkkaScheduler.html" class="extype" name="rummage.AkkaClock.AsyncWaitWithAkkaScheduler">AsyncWaitWithAkkaScheduler</a> → <a href="Clock.html" class="extype" name="rummage.Clock">Clock</a></dd></dl></div>
     </li><li name="scala.AnyRef#clone" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="clone():Object"></a>
       <a id="clone():AnyRef"></a>
@@ -247,36 +244,6 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="scala.AnyRef#equals" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="equals(x$1:Any):Boolean"></a>
-      <a id="equals(Any):Boolean"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="rummage.Timer#every" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="every[U](interval:scala.concurrent.duration.FiniteDuration)(f:=&gt;U)(implicitec:scala.concurrent.ExecutionContext):rummage.Timer.Task"></a>
-      <a id="every[U](FiniteDuration)(⇒U)(ExecutionContext):Task"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">every</span><span class="tparams">[<span name="U">U</span>]</span><span class="params">(<span name="interval">interval: <span class="extype" name="scala.concurrent.duration.FiniteDuration">FiniteDuration</span></span>)</span><span class="params">(<span name="f">f: ⇒ <span class="extype" name="rummage.Timer.every.U">U</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="ec">ec: <span class="extype" name="scala.concurrent.ExecutionContext">ExecutionContext</span></span>)</span><span class="result">: <a href="Timer$$Task.html" class="extype" name="rummage.Timer.Task">Task</a></span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">Performs a task after the specified delay and repeatedly thereafter, waiting the specified interval between
-invocations.</p><div class="fullcomment"><div class="comment cmt"><p>Performs a task after the specified delay and repeatedly thereafter, waiting the specified interval between
-invocations.
-</p></div><dl class="paramcmts block"><dt class="tparam">U</dt><dd class="cmt"><p>Any type, treated as if it was <code>Unit</code>.</p></dd><dt class="param">interval</dt><dd class="cmt"><p>The amount of time to wait before performing the task and between subsequent executions.</p></dd><dt class="param">f</dt><dd class="cmt"><p>The action to repeatedly perform.</p></dd><dt class="param">ec</dt><dd class="cmt"><p>The execution context to perform the action on.
-</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Timer.html" class="extype" name="rummage.Timer">Timer</a></dd></dl></div>
     </li><li name="scala.AnyRef#finalize" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="finalize():Unit"></a>
       <a id="finalize():Unit"></a>
@@ -306,19 +273,6 @@ invocations.
       </span>
       <span class="symbol">
         <span class="name">getClass</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.Class">Class</span>[_]</span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="scala.AnyRef#hashCode" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="hashCode():Int"></a>
-      <a id="hashCode():Int"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">hashCode</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
@@ -374,23 +328,34 @@ invocations.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="rummage.JavaTimer#submit" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="submit(delay:scala.concurrent.duration.FiniteDuration,interval:Option[scala.concurrent.duration.FiniteDuration],f:()=&gt;Unit)(implicitec:scala.concurrent.ExecutionContext):rummage.Timer.Task"></a>
-      <a id="submit(FiniteDuration,Option[FiniteDuration],()⇒Unit)(ExecutionContext):Task"></a>
+    </li><li name="rummage.Clock.SystemTime#now" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="now:scala.concurrent.duration.FiniteDuration"></a>
+      <a id="now:FiniteDuration"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">submit</span><span class="params">(<span name="delay">delay: <span class="extype" name="scala.concurrent.duration.FiniteDuration">FiniteDuration</span></span>, <span name="interval">interval: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.concurrent.duration.FiniteDuration">FiniteDuration</span>]</span>, <span name="f">f: () ⇒ <span class="extype" name="scala.Unit">Unit</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="ec">ec: <span class="extype" name="scala.concurrent.ExecutionContext">ExecutionContext</span></span>)</span><span class="result">: <a href="Timer$$Task.html" class="extype" name="rummage.Timer.Task">Task</a></span>
+        <span class="name">now</span><span class="result">: <span class="extype" name="scala.concurrent.duration.FiniteDuration">FiniteDuration</span></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Submits a task for execution after the specified delay and possibly repeatedly thereafter, waiting the specified
-interval (if specified) between invocations.</p><div class="fullcomment"><div class="comment cmt"><p>Submits a task for execution after the specified delay and possibly repeatedly thereafter, waiting the specified
-interval (if specified) between invocations.
-</p></div><dl class="paramcmts block"><dt class="param">delay</dt><dd class="cmt"><p>The amount of time to wait before performing the task for the first time.</p></dd><dt class="param">interval</dt><dd class="cmt"><p>A <code>Some</code> containing the amount of time to wait between subsequent executions or <code>None</code>.</p></dd><dt class="param">f</dt><dd class="cmt"><p>The action to (possibly repeatedly) perform.</p></dd><dt class="param">ec</dt><dd class="cmt"><p>The execution context to perform the action on.
-</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="rummage.JavaTimer">JavaTimer</a> → <a href="Timer.html" class="extype" name="rummage.Timer">Timer</a></dd></dl></div>
+      <p class="shortcomment cmt">Returns the amount of time that has passed since 12:00 am January 1 1970 GMT.</p><div class="fullcomment"><div class="comment cmt"><p>Returns the amount of time that has passed since 12:00 am January 1 1970 GMT.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Clock$$SystemTime.html" class="extype" name="rummage.Clock.SystemTime">SystemTime</a> → <a href="Clock.html" class="extype" name="rummage.Clock">Clock</a></dd></dl></div>
+    </li><li name="rummage.Clock.SyncWaitBySleeping#syncWait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="syncWait(timeout:scala.concurrent.duration.FiniteDuration):scala.concurrent.duration.FiniteDuration"></a>
+      <a id="syncWait(FiniteDuration):FiniteDuration"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">syncWait</span><span class="params">(<span name="timeout">timeout: <span class="extype" name="scala.concurrent.duration.FiniteDuration">FiniteDuration</span></span>)</span><span class="result">: <span class="extype" name="scala.concurrent.duration.FiniteDuration">FiniteDuration</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Attempts to wait for the specified duration, completing after it has elapsed or if an error is encountered.</p><div class="fullcomment"><div class="comment cmt"><p>Attempts to wait for the specified duration, completing after it has elapsed or if an error is encountered.
+</p></div><dl class="paramcmts block"><dt class="param">timeout</dt><dd class="cmt"><p>The amount of time to block the calling thread.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Clock$$SyncWaitBySleeping.html" class="extype" name="rummage.Clock.SyncWaitBySleeping">SyncWaitBySleeping</a> → <a href="Clock.html" class="extype" name="rummage.Clock">Clock</a></dd></dl></div>
     </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
       <a id="synchronized[T0](⇒T0):T0"></a>
@@ -404,19 +369,21 @@ interval (if specified) between invocations.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="scala.AnyRef#toString" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="toString():String"></a>
-      <a id="toString():String"></a>
+    </li><li name="rummage.Clock.SystemTime#tick" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="tick:scala.concurrent.duration.FiniteDuration"></a>
+      <a id="tick:FiniteDuration"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">toString</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+        <span class="name">tick</span><span class="result">: <span class="extype" name="scala.concurrent.duration.FiniteDuration">FiniteDuration</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+      <p class="shortcomment cmt">Returns the amount of time that has passed since an arbitrary point in history.</p><div class="fullcomment"><div class="comment cmt"><p>Returns the amount of time that has passed since an arbitrary point in history. The results of this method are
+only useful when compared against the result of other invocations of this method.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Clock$$SystemTime.html" class="extype" name="rummage.Clock.SystemTime">SystemTime</a> → <a href="Clock.html" class="extype" name="rummage.Clock">Clock</a></dd></dl></div>
     </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait():Unit"></a>
       <a id="wait():Unit"></a>
@@ -483,8 +450,22 @@ interval (if specified) between invocations.
         </div>
 
         <div id="inheritedMembers">
-        <div class="parent" name="rummage.Timer">
-              <h3>Inherited from <a href="Timer.html" class="extype" name="rummage.Timer">Timer</a></h3>
+        <div class="parent" name="scala.Serializable">
+              <h3>Inherited from <span class="extype" name="scala.Serializable">Serializable</span></h3>
+            </div><div class="parent" name="java.io.Serializable">
+              <h3>Inherited from <span class="extype" name="java.io.Serializable">Serializable</span></h3>
+            </div><div class="parent" name="scala.Product">
+              <h3>Inherited from <span class="extype" name="scala.Product">Product</span></h3>
+            </div><div class="parent" name="scala.Equals">
+              <h3>Inherited from <span class="extype" name="scala.Equals">Equals</span></h3>
+            </div><div class="parent" name="rummage.AkkaClock.AsyncWaitWithAkkaScheduler">
+              <h3>Inherited from <a href="AkkaClock$$AsyncWaitWithAkkaScheduler.html" class="extype" name="rummage.AkkaClock.AsyncWaitWithAkkaScheduler">AsyncWaitWithAkkaScheduler</a></h3>
+            </div><div class="parent" name="rummage.Clock.SyncWaitBySleeping">
+              <h3>Inherited from <a href="Clock$$SyncWaitBySleeping.html" class="extype" name="rummage.Clock.SyncWaitBySleeping">SyncWaitBySleeping</a></h3>
+            </div><div class="parent" name="rummage.Clock.SystemTime">
+              <h3>Inherited from <a href="Clock$$SystemTime.html" class="extype" name="rummage.Clock.SystemTime">SystemTime</a></h3>
+            </div><div class="parent" name="rummage.Clock">
+              <h3>Inherited from <a href="Clock.html" class="extype" name="rummage.Clock">Clock</a></h3>
             </div><div class="parent" name="scala.AnyRef">
               <h3>Inherited from <span class="extype" name="scala.AnyRef">AnyRef</span></h3>
             </div><div class="parent" name="scala.Any">
