@@ -9,7 +9,7 @@ import SonatypeKeys._
 
 name := "rummage"
 
-version := "2.0-SNAPSHOT"
+version := "1.1-SNAPSHOT"
 
 description := "One-off Scala utilities and tools."
 
@@ -28,7 +28,7 @@ scalaVersion := "2.10.3"
 libraryDependencies ++= Seq(
   "com.typesafe.akka" %% "akka-actor" % "2.3.0" % "provided",
   "org.scalatest" %% "scalatest" % "2.0" % "test",
-  "org.scalamock" %% "scalamock-scalatest-support" % "3.1.RC1" % "test"
+  "org.scalamock" %% "scalamock-scalatest-support" % "3.2" % "test"
 )
 
 licenses := Seq("The Apache Software License, Version 2.0" -> url("http://www.apache.org/licenses/LICENSE-2.0.txt"))
