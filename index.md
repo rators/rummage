@@ -16,7 +16,7 @@ Prerequisites:
 
  - JVM 1.5+
 
- - Scala 2.10.3+
+ - Scala 2.10.4+
 
 To use rummage in your project simply add one line to your SBT configuration:
 
