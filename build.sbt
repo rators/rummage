@@ -23,7 +23,7 @@ organizationName := "zman.io"
 
 organizationHomepage := Some(url("http://zman.io/"))
 
-scalaVersion := "2.10.3"
+scalaVersion := "2.10.4"
 
 libraryDependencies ++= Seq(
   "com.typesafe.akka" %% "akka-actor" % "2.3.0" % "provided",

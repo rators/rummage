@@ -103,6 +103,16 @@ class ClocksSpec extends FlatSpec with Matchers with MockFactory {
     Await.result(scaled.asyncWait(50 millis), Duration.Inf) shouldBe 50.millis
   }
 
+  it should "reject invalid scaling factors" in {
+    an[IllegalArgumentException] should be thrownBy ScaledClock(0.0)
+    an[IllegalArgumentException] should be thrownBy ScaledClock(-1.0)
+    an[IllegalArgumentException] should be thrownBy ScaledClock(Double.NaN)
+    an[IllegalArgumentException] should be thrownBy ScaledClock(Double.PositiveInfinity)
+    an[IllegalArgumentException] should be thrownBy ScaledClock(Double.NegativeInfinity)
+    an[IllegalArgumentException] should be thrownBy ScaledClock(1.second -> 0.seconds)
+    an[IllegalArgumentException] should be thrownBy ScaledClock(0.seconds -> 1.second)
+  }
+
   /** A utility that times a function and verifies that it reports the correct duration. */
   def timed(f: => FiniteDuration, tolerance: FiniteDuration): FiniteDuration = {
     val start = System.nanoTime
