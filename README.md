@@ -5,7 +5,7 @@ This library contains the following utilities:
 
  - [rummage.Clock](http://zman.io/rummage/api/#rummage.Clock): a general-purpose time abstraction.
 
- - [rummage.TryAll](http://zman.io/rummage/api/#rummage.TryAll): An extension to the `scala.util.Try` API to add support aggregated try operations.
+ - [rummage.TryAll](http://zman.io/rummage/api/#rummage.TryAll$): An extension to the `scala.util.Try` API to add support aggregated try operations.
 
 
 [source](https://github.com/zmanio/rummage) - [documentation](http://zman.io/rummage/api/#rummage.package) - [changelog](changelog/)
