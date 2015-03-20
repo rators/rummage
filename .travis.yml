@@ -6,8 +6,10 @@ scala:
 branches:
   only:
     - master
-  
-script: sbt ++$TRAVIS_SCALA_VERSION coveralls
+    
+script: sbt ++$TRAVIS_SCALA_VERSION clean coverage test
+
+after_success: sbt coveralls
 
 notifications:
   email:
