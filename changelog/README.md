@@ -1,3 +1,9 @@
+## 1.2 (2015-03-20)
+
+ - Added support for Scala 2.11 in addition to Scala 2.10.
+
+ - Updated dependencies to support Scala 2.11.
+
 ## 1.1 (2014-12-04)
 
  - Added [rummage.Clock](http://zman.io/rummage/api/#rummage.Clock) as a more general-purpose time abstraction than [rummage.Timer](http://zman.io/rummage/api/#rummage.Timer).
