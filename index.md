@@ -24,12 +24,12 @@ Prerequisites:
 
  - JVM 1.5+
 
- - Scala 2.10.4+
+ - Scala 2.10.4+ or Scala 2.11.6+
 
 To use rummage in your project simply add one line to your SBT configuration:
 
 ```scala
-libraryDependencies += "io.zman" %% "rummage" % "1.1"
+libraryDependencies += "io.zman" %% "rummage" % "1.2"
 ```
 
-[Instructions for other build systems](http://mvnrepository.com/artifact/io.zman/rummage_2.10/1.1).
+[Instructions for other build systems](http://mvnrepository.com/artifact/io.zman/rummage_2.10/1.2).
