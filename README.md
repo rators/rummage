@@ -8,7 +8,7 @@ This library contains the following utilities:
  - [rummage.TryAll](http://zman.io/rummage/api/#rummage.TryAll$): An extension to the `scala.util.Try` API to add support aggregated try operations.
 
 
-[source](https://github.com/zmanio/rummage) - [documentation](http://zman.io/rummage/api/#rummage.package) - [changelog](changelog/)
+[code](https://github.com/zmanio/rummage) - [licence](https://github.com/zmanio/rummage/blob/master/LICENSE) - [api](http://zman.io/rummage/api/#rummage.package) - [history](changelog/)
 
 [![Build Status](https://travis-ci.org/zmanio/rummage.png?branch=master)](https://travis-ci.org/zmanio/rummage) [![Coverage Status](https://coveralls.io/repos/zmanio/rummage/badge.png)](https://coveralls.io/r/zmanio/rummage)
 
@@ -17,14 +17,14 @@ This library contains the following utilities:
 
 Prerequisites:
 
- - JVM 1.5+
+ - [Java](http://www.oracle.com/technetwork/java/index.html) 1.6+
 
- - Scala 2.10.4+ or Scala 2.11.6+
+ - [Scala](http://scala-lang.org/) 2.10.4+ or Scala 2.11.6+
 
-To use rummage in your project simply add one line to your SBT configuration:
+To use from SBT, add the following to your build.sbt file:
 
 ```scala
 libraryDependencies += "io.zman" %% "rummage" % "1.2"
 ```
 
-[Instructions for other build systems](http://mvnrepository.com/artifact/io.zman/rummage_2.10/1.2).
+For other build systems or to download the jar see [rummage in the central repository](http://mvnrepository.com/artifact/io.zman/rummage_2.11/1.2).
