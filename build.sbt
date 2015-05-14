@@ -6,7 +6,7 @@ import SonatypeKeys._
 
 name := "rummage"
 
-version := "1.2"
+version := "1.3"
 
 description := "One-off Scala utilities and tools."
 
