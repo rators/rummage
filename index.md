@@ -9,7 +9,7 @@ This library contains the following utilities:
 
  - [rummage.Clock](http://zman.io/rummage/api/#rummage.Clock): a general-purpose time abstraction.
 
- - [rummage.Deadline](http://zman.io/rummage/api/#rummage.Deadline): an extension to `scala.concurrent.Future` that adds support for completion time limits.
+ - [rummage.Deadline](http://zman.io/rummage/api/#rummage.Deadline$): an extension to `scala.concurrent.Future` that adds support for completion time limits.
 
  - [rummage.TryAll](http://zman.io/rummage/api/#rummage.TryAll$): an extension to `scala.util.Try` that adds support for aggregated try operations.
 
