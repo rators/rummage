@@ -1,6 +1,6 @@
 ## 1.3 (2015-05-14)
 
- - Added [rummage.Deadline](http://zman.io/rummage/api/#rummage.Deadline), a mechanism that can place a hard time limit on the completion of a `scala.concurrent.Future`.
+ - Added [rummage.Deadline](http://zman.io/rummage/api/#rummage.Deadline$), a mechanism that can place a hard time limit on the completion of a `scala.concurrent.Future`.
 
 ## 1.2 (2015-03-20)
 
