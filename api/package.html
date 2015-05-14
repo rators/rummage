@@ -1,5 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<!DOCTYPE html >
 <html>
         <head>
           <title>root - _root_</title>
@@ -9,6 +8,11 @@
           
       <link href="lib/template.css" media="screen" type="text/css" rel="stylesheet" />
       <link href="lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="lib/jquery.js" id="jquery-js"></script>
+      <script type="text/javascript" src="lib/jquery-ui.js"></script>
+      <script type="text/javascript" src="lib/template.js"></script>
+      <script type="text/javascript" src="lib/tools.tooltip.js"></script>
+      
       <script type="text/javascript">
          if(top === self) {
             var url = 'index.html';
@@ -26,7 +30,11 @@
       <div id="definition">
         <img src="lib/package_big.png" />
         
-        <h1>root package</h1>
+        <h1>root package</h1><span class="permalink">
+      <a href="index.html#package" title="Permalink" target="_top">
+        <img src="lib/permalink.png" />
+      </a>
+    </span>
       </div>
 
       <h4 id="signature" class="signature">
@@ -62,7 +70,7 @@
 
         <div id="values" class="values members">
               <h3>Value Members</h3>
-              <ol><li name="_root_.rummage" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+              <ol><li name="_root_.rummage" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="rummage"></a>
       <a id="rummage:rummage"></a>
       <h4 class="signature">
@@ -73,8 +81,14 @@
       <span class="symbol">
         <a href="rummage/package.html"><span class="name">rummage</span></a>
       </span>
-      </h4>
-      <p class="comment cmt">The <code>rummage</code> package is a collection of small Scala utilities.</p>
+      </h4><span class="permalink">
+      <a href="index.html#package@rummage" title="Permalink" target="_top">
+        <img src="lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">The <code>rummage</code> package is a collection of small Scala utilities.</p><div class="fullcomment"><div class="comment cmt"><p>The <code>rummage</code> package is a collection of small Scala utilities.</p><p>This package consists of self-contained utilities that are too small and general to warrant their own package and/or
+artifact, but are too large, nuanced or handy to have around to be re-implemented over and over again.
+</p></div></div>
     </li></ol>
             </div>
 
@@ -100,6 +114,7 @@
       <div id="tooltip"></div>
 
       <div id="footer">  </div>
-      <script defer="defer" type="text/javascript" id="jquery-js" src="lib/jquery.js"></script><script defer="defer" type="text/javascript" id="jquery-ui-js" src="lib/jquery-ui.js"></script><script defer="defer" type="text/javascript" id="tools-tooltip-js" src="lib/tools.tooltip.js"></script><script defer="defer" type="text/javascript" id="template-js" src="lib/template.js"></script>
+
+
     </body>
       </html>

@@ -7,10 +7,12 @@ A [Scala](http://www.scala-lang.org/) library that contains utilities that are t
 
 This library contains the following utilities:
 
-
  - [rummage.Clock](http://zman.io/rummage/api/#rummage.Clock): a general-purpose time abstraction.
 
- - [rummage.TryAll](http://zman.io/rummage/api/#rummage.TryAll$): An extension to the `scala.util.Try` API to add support aggregated try operations.
+ - [rummage.Deadline](http://zman.io/rummage/api/#rummage.Deadline): an extension to `scala.concurrent.Future` that adds support for completion time limits.
+
+ - [rummage.TryAll](http://zman.io/rummage/api/#rummage.TryAll$): an extension to `scala.util.Try` that adds support for aggregated try operations.
+
 
 [code](https://github.com/zmanio/rummage) - [licence](https://github.com/zmanio/rummage/blob/master/LICENSE) - [api](http://zman.io/rummage/api/#rummage.package) - [history](changelog/)
 
@@ -28,7 +30,7 @@ Prerequisites:
 To use from SBT, add the following to your build.sbt file:
 
 ```scala
-libraryDependencies += "io.zman" %% "rummage" % "1.2"
+libraryDependencies += "io.zman" %% "rummage" % "1.3"
 ```
 
-For other build systems or to download the jar see [rummage in the central repository](http://mvnrepository.com/artifact/io.zman/rummage_2.11/1.2).
+For other build systems or to download the jar see [rummage in the central repository](http://mvnrepository.com/artifact/io.zman/rummage_2.11/1.3).

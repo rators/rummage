@@ -1,5 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<!DOCTYPE html >
 <html>
         <head>
           <title>rummage - rummage</title>
@@ -9,6 +8,11 @@
           
       <link href="../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
       <link href="../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../lib/jquery.js" id="jquery-js"></script>
+      <script type="text/javascript" src="../lib/jquery-ui.js"></script>
+      <script type="text/javascript" src="../lib/template.js"></script>
+      <script type="text/javascript" src="../lib/tools.tooltip.js"></script>
+      
       <script type="text/javascript">
          if(top === self) {
             var url = '../index.html';
@@ -26,7 +30,11 @@
       <div id="definition">
         <img src="../lib/package_big.png" />
         
-        <h1>rummage</h1>
+        <h1>rummage</h1><span class="permalink">
+      <a href="../index.html#rummage.package" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
       </div>
 
       <h4 id="signature" class="signature">
@@ -83,7 +91,7 @@ artifact, but are too large, nuanced or handy to have around to be re-implemente
 
         <div id="types" class="types members">
               <h3>Type Members</h3>
-              <ol><li name="rummage.AkkaClock" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+              <ol><li name="rummage.AkkaClock" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="AkkaClockextendsClock.SystemTimewithClock.SyncWaitBySleepingwithAkkaClock.AsyncWaitWithAkkaSchedulerwithProductwithSerializable"></a>
       <a id="AkkaClock:AkkaClock"></a>
       <h4 class="signature">
@@ -94,8 +102,17 @@ artifact, but are too large, nuanced or handy to have around to be re-implemente
       <span class="symbol">
         <a href="AkkaClock.html"><span class="name">AkkaClock</span></a><span class="params">(<span name="akkaScheduler">akkaScheduler: <span class="extype" name="akka.actor.Scheduler">Scheduler</span></span>)</span><span class="result"> extends <a href="Clock$$SystemTime.html" class="extype" name="rummage.Clock.SystemTime">SystemTime</a> with <a href="Clock$$SyncWaitBySleeping.html" class="extype" name="rummage.Clock.SyncWaitBySleeping">SyncWaitBySleeping</a> with <a href="AkkaClock$$AsyncWaitWithAkkaScheduler.html" class="extype" name="rummage.AkkaClock.AsyncWaitWithAkkaScheduler">AsyncWaitWithAkkaScheduler</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
-      </h4>
-      <p class="comment cmt">A clock for use in Akka actors, using system time and Thread.</p>
+      </h4><span class="permalink">
+      <a href="../index.html#rummage.package@AkkaClockextendsClock.SystemTimewithClock.SyncWaitBySleepingwithAkkaClock.AsyncWaitWithAkkaSchedulerwithProductwithSerializable" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">A clock for use in Akka actors, using system time and Thread.sleep()<code> for synchronous waiting, but using an Akka
+<code>Scheduler</code> for asynchronous waiting.
+</code></p><div class="fullcomment"><div class="comment cmt"><p>A clock for use in Akka actors, using system time and Thread.sleep()<code> for synchronous waiting, but using an Akka
+<code>Scheduler</code> for asynchronous waiting.
+</code></p></div><dl class="paramcmts block"><dt class="param">akkaScheduler</dt><dd class="cmt"><p>The Akka scheduler to use.
+</p></dd></dl></div>
     </li><li name="rummage.AkkaClocks" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="AkkaClocksextendsAnyRef"></a>
       <a id="AkkaClocks:AkkaClocks"></a>
@@ -107,9 +124,13 @@ artifact, but are too large, nuanced or handy to have around to be re-implemente
       <span class="symbol">
         <a href="AkkaClocks.html"><span class="name">AkkaClocks</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
       </span>
-      </h4>
-      <p class="comment cmt">A trait that defines when an implicit Akka clock is available.</p>
-    </li><li name="rummage.Clock" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      </h4><span class="permalink">
+      <a href="../index.html#rummage.package@AkkaClocksextendsAnyRef" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">A trait that defines when an implicit Akka clock is available.</p>
+    </li><li name="rummage.Clock" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
       <a id="ClockextendsAnyRef"></a>
       <a id="Clock:Clock"></a>
       <h4 class="signature">
@@ -120,9 +141,51 @@ artifact, but are too large, nuanced or handy to have around to be re-implemente
       <span class="symbol">
         <a href="Clock.html"><span class="name">Clock</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
       </span>
-      </h4>
-      <p class="comment cmt">A low-level abstraction over time.</p>
-    </li><li name="rummage.ScaledClock" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      </h4><span class="permalink">
+      <a href="../index.html#rummage.package@ClockextendsAnyRef" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">A low-level abstraction over time.</p><div class="fullcomment"><div class="comment cmt"><p>A low-level abstraction over time. This class supports querying the absolute time and the monitoring flow of time as
+well as waiting for future times both synchronously and asynchronously.
+</p></div></div>
+    </li><li name="rummage.DeadlineException" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="DeadlineExceptionextendsRuntimeExceptionwithNoStackTracewithProductwithSerializable"></a>
+      <a id="DeadlineException:DeadlineException"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="DeadlineException.html"><span class="name">DeadlineException</span></a><span class="params">(<span name="duration">duration: <span class="extype" name="scala.concurrent.duration.FiniteDuration">FiniteDuration</span></span>)</span><span class="result"> extends <span class="extype" name="scala.RuntimeException">RuntimeException</span> with <span class="extype" name="scala.util.control.NoStackTrace">NoStackTrace</span> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#rummage.package@DeadlineExceptionextendsRuntimeExceptionwithNoStackTracewithProductwithSerializable" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">The exception returned when a deadline cannot be met.</p><div class="fullcomment"><div class="comment cmt"><p>The exception returned when a deadline cannot be met.
+</p></div><dl class="paramcmts block"><dt class="param">duration</dt><dd class="cmt"><p>The time limit that was exceeded.
+</p></dd></dl></div>
+    </li><li name="rummage.Deadlines" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="DeadlinesextendsAnyRef"></a>
+      <a id="Deadlines:Deadlines"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Deadlines.html"><span class="name">Deadlines</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#rummage.package@DeadlinesextendsAnyRef" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Definition of the deadline DSL.</p>
+    </li><li name="rummage.ScaledClock" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ScaledClockextendsClockwithProductwithSerializable"></a>
       <a id="ScaledClock:ScaledClock"></a>
       <h4 class="signature">
@@ -133,9 +196,18 @@ artifact, but are too large, nuanced or handy to have around to be re-implemente
       <span class="symbol">
         <a href="ScaledClock.html"><span class="name">ScaledClock</span></a><span class="params">(<span name="factor">factor: <span class="extype" name="scala.Double">Double</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="clock">clock: <a href="Clock.html" class="extype" name="rummage.Clock">Clock</a></span>)</span><span class="result"> extends <a href="Clock.html" class="extype" name="rummage.Clock">Clock</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
-      </h4>
-      <p class="comment cmt">A clock that scales the progression of time reported by another clock.</p>
-    </li><li name="rummage.AkkaTimer" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      </h4><span class="permalink">
+      <a href="../index.html#rummage.package@ScaledClockextendsClockwithProductwithSerializable" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">A clock that scales the progression of time reported by another clock.</p><div class="fullcomment"><div class="comment cmt"><p>A clock that scales the progression of time reported by another clock.</p><p>The provided <code>factor</code> maps time from the underlying clock into time for the scaled clock. For example: a scale of
+<code>2.0</code> will result in the scaled clock reporting the passage of time twice as quickly as the underlying clock, since
+every second of real time equates to two seconds of scaled time. Conversely, a scale of <code>0.5</code> will result in the
+scaled clock reporting the passage of time half as quickly as the underlying clock.
+</p></div><dl class="paramcmts block"><dt class="param">factor</dt><dd class="cmt"><p>The scaling factor to apply to the passage of time.</p></dd><dt class="param">clock</dt><dd class="cmt"><p>The underlying clock to scale the time of.
+</p></dd></dl></div>
+    </li><li name="rummage.AkkaTimer" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="AkkaTimerextendsTimer"></a>
       <a id="AkkaTimer:AkkaTimer"></a>
       <h4 class="signature">
@@ -146,9 +218,17 @@ artifact, but are too large, nuanced or handy to have around to be re-implemente
       <span class="symbol">
         <a href="AkkaTimer.html"><span class="name deprecated" title="Deprecated: (Since version 1.1) Timers are replaced by the Clock API">AkkaTimer</span></a><span class="result"> extends <a href="Timer.html" class="extype" name="rummage.Timer">Timer</a></span>
       </span>
-      </h4>
-      <p class="comment cmt">A timer implemented with an Akka <code>Scheduler</code>.</p>
-    </li><li name="rummage.JavaTimer" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      </h4><span class="permalink">
+      <a href="../index.html#rummage.package@AkkaTimerextendsTimer" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">A timer implemented with an Akka <code>Scheduler</code>.</p><div class="fullcomment"><div class="comment cmt"><p>A timer implemented with an Akka <code>Scheduler</code>.
+</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 1.1)</i> Timers are replaced by the Clock API</p></dd></dl></div>
+    </li><li name="rummage.JavaTimer" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="JavaTimerextendsTimer"></a>
       <a id="JavaTimer:JavaTimer"></a>
       <h4 class="signature">
@@ -159,9 +239,17 @@ artifact, but are too large, nuanced or handy to have around to be re-implemente
       <span class="symbol">
         <a href="JavaTimer.html"><span class="name deprecated" title="Deprecated: (Since version 1.1) Timers are replaced by the Clock API">JavaTimer</span></a><span class="result"> extends <a href="Timer.html" class="extype" name="rummage.Timer">Timer</a></span>
       </span>
-      </h4>
-      <p class="comment cmt">A timer implemented with a Java <code>ScheduledExecutorService</code>.</p>
-    </li><li name="rummage.Timer" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      </h4><span class="permalink">
+      <a href="../index.html#rummage.package@JavaTimerextendsTimer" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">A timer implemented with a Java <code>ScheduledExecutorService</code>.</p><div class="fullcomment"><div class="comment cmt"><p>A timer implemented with a Java <code>ScheduledExecutorService</code>.
+</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 1.1)</i> Timers are replaced by the Clock API</p></dd></dl></div>
+    </li><li name="rummage.Timer" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
       <a id="TimerextendsAnyRef"></a>
       <a id="Timer:Timer"></a>
       <h4 class="signature">
@@ -172,8 +260,16 @@ artifact, but are too large, nuanced or handy to have around to be re-implemente
       <span class="symbol">
         <a href="Timer.html"><span class="name deprecated" title="Deprecated: (Since version 1.1) Timers are replaced by the Clock API">Timer</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
       </span>
-      </h4>
-      <p class="comment cmt">An interface for scheduling tasks to run one or more times at some point in the future.</p>
+      </h4><span class="permalink">
+      <a href="../index.html#rummage.package@TimerextendsAnyRef" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">An interface for scheduling tasks to run one or more times at some point in the future.</p><div class="fullcomment"><div class="comment cmt"><p>An interface for scheduling tasks to run one or more times at some point in the future.
+</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 1.1)</i> Timers are replaced by the Clock API</p></dd></dl></div>
     </li></ol>
             </div>
 
@@ -192,8 +288,12 @@ artifact, but are too large, nuanced or handy to have around to be re-implemente
       <span class="symbol">
         <a href="AkkaClock$.html"><span class="name">AkkaClock</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
-      </h4>
-      <p class="comment cmt">Support for the <code>AkkaClock</code> class.</p>
+      </h4><span class="permalink">
+      <a href="../index.html#rummage.package@AkkaClock" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Support for the <code>AkkaClock</code> class.</p>
     </li><li name="rummage.AkkaClocks" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="AkkaClocks"></a>
       <a id="AkkaClocks:AkkaClocks"></a>
@@ -205,8 +305,12 @@ artifact, but are too large, nuanced or handy to have around to be re-implemente
       <span class="symbol">
         <a href="AkkaClocks$.html"><span class="name">AkkaClocks</span></a><span class="result"> extends <a href="AkkaClocks.html" class="extype" name="rummage.AkkaClocks">AkkaClocks</a></span>
       </span>
-      </h4>
-      <p class="comment cmt">Global access to the implicit Akka clock publisher.</p>
+      </h4><span class="permalink">
+      <a href="../index.html#rummage.package@AkkaClocks" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Global access to the implicit Akka clock publisher.</p>
     </li><li name="rummage.Clock" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="Clock"></a>
       <a id="Clock:Clock"></a>
@@ -218,8 +322,46 @@ artifact, but are too large, nuanced or handy to have around to be re-implemente
       <span class="symbol">
         <a href="Clock$.html"><span class="name">Clock</span></a>
       </span>
-      </h4>
-      <p class="comment cmt">Primary factory and resolver for instances of <code>Clock</code>.</p>
+      </h4><span class="permalink">
+      <a href="../index.html#rummage.package@Clock" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Primary factory and resolver for instances of <code>Clock</code>.</p>
+    </li><li name="rummage.Deadline" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Deadline"></a>
+      <a id="Deadline:Deadline"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Deadline$.html"><span class="name">Deadline</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#rummage.package@Deadline" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">A factory for deadline-bound futures.</p>
+    </li><li name="rummage.Deadlines" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Deadlines"></a>
+      <a id="Deadlines:Deadlines"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Deadlines$.html"><span class="name">Deadlines</span></a><span class="result"> extends <a href="Deadlines.html" class="extype" name="rummage.Deadlines">Deadlines</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#rummage.package@Deadlines" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Global implementation of the deadline DSL.</p>
     </li><li name="rummage.ScaledClock" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="ScaledClock"></a>
       <a id="ScaledClock:ScaledClock"></a>
@@ -231,9 +373,13 @@ artifact, but are too large, nuanced or handy to have around to be re-implemente
       <span class="symbol">
         <a href="ScaledClock$.html"><span class="name">ScaledClock</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
-      </h4>
-      <p class="comment cmt">A factory for scaled clocks.</p>
-    </li><li name="rummage.TryAll" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      </h4><span class="permalink">
+      <a href="../index.html#rummage.package@ScaledClock" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">A factory for scaled clocks.</p>
+    </li><li name="rummage.TryAll" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="TryAll"></a>
       <a id="TryAll:TryAll"></a>
       <h4 class="signature">
@@ -244,8 +390,18 @@ artifact, but are too large, nuanced or handy to have around to be re-implemente
       <span class="symbol">
         <a href="TryAll$.html"><span class="name">TryAll</span></a>
       </span>
-      </h4>
-      <p class="comment cmt">An extension to the <code>scala.util.Try</code> interface to support aggregated try operations.</p>
+      </h4><span class="permalink">
+      <a href="../index.html#rummage.package@TryAll" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">An extension to the <code>scala.util.Try</code> interface to support aggregated try operations.</p><div class="fullcomment"><div class="comment cmt"><p>An extension to the <code>scala.util.Try</code> interface to support aggregated try operations.</p><p>This API extends Scala's <code>Try</code> to support situations where you have <code>Try[_ &lt;: Iterable[_]]</code> and want to attempt an
+operation on all elements of the <code>Iterable</code> contained in the <code>Try</code> and flatten the results of those operations into
+a single <code>Try</code>.</p><p>This API provides two mechanisms by which you can attempt operations on aggregations:</p><ul><li><code>(_: Try[_ &lt;: Iterable[_]]).onEach</code> exposes combinators that will *fail fast*, meaning that it will apply a
+   function to each member of the aggregate and will abort immediately if it encounters a failure on any member.</li><li><code>(_: Try[_ &lt;: Iterable[_]]).onEvery</code> exposes combinators that will *fail eventually*, meaning that it will apply
+   a function to every member of the aggregate, collecting any failures it encounters and returning them after all
+   elements have been processed.</li></ul><p>Additionally, this API extends <code>scala.util.Failure</code> with two new failure abstractions:</p><ul><li><code>Problem</code> provides a factory and extractor for failures that carry only a message and no stack trace.</li><li><code>Failures</code> provides a factory and extractor for failures that are only aggregations of other failures.
+</li></ul></div></div>
     </li></ol>
             </div>
 
@@ -253,7 +409,7 @@ artifact, but are too large, nuanced or handy to have around to be re-implemente
 
         <div id="values" class="values members">
               <h3>Deprecated Value Members</h3>
-              <ol><li name="rummage.AkkaTimer" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+              <ol><li name="rummage.AkkaTimer" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="AkkaTimer"></a>
       <a id="AkkaTimer:AkkaTimer"></a>
       <h4 class="signature">
@@ -264,9 +420,17 @@ artifact, but are too large, nuanced or handy to have around to be re-implemente
       <span class="symbol">
         <a href="AkkaTimer$.html"><span class="name deprecated" title="Deprecated: (Since version 1.1) Timers are replaced by the Clock API">AkkaTimer</span></a>
       </span>
-      </h4>
-      <p class="comment cmt">Factory for timers implemented with an Akka <code>Scheduler</code>.</p>
-    </li><li name="rummage.JavaTimer" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      </h4><span class="permalink">
+      <a href="../index.html#rummage.package@AkkaTimer" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Factory for timers implemented with an Akka <code>Scheduler</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Factory for timers implemented with an Akka <code>Scheduler</code>.
+</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 1.1)</i> Timers are replaced by the Clock API</p></dd></dl></div>
+    </li><li name="rummage.JavaTimer" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="JavaTimer"></a>
       <a id="JavaTimer:JavaTimer"></a>
       <h4 class="signature">
@@ -277,9 +441,17 @@ artifact, but are too large, nuanced or handy to have around to be re-implemente
       <span class="symbol">
         <a href="JavaTimer$.html"><span class="name deprecated" title="Deprecated: (Since version 1.1) Timers are replaced by the Clock API">JavaTimer</span></a>
       </span>
-      </h4>
-      <p class="comment cmt">Factory for timers implemented with a Java <code>ScheduledExecutorService</code>.</p>
-    </li><li name="rummage.Timer" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      </h4><span class="permalink">
+      <a href="../index.html#rummage.package@JavaTimer" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Factory for timers implemented with a Java <code>ScheduledExecutorService</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Factory for timers implemented with a Java <code>ScheduledExecutorService</code>.
+</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 1.1)</i> Timers are replaced by the Clock API</p></dd></dl></div>
+    </li><li name="rummage.Timer" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="Timer"></a>
       <a id="Timer:Timer"></a>
       <h4 class="signature">
@@ -290,8 +462,17 @@ artifact, but are too large, nuanced or handy to have around to be re-implemente
       <span class="symbol">
         <a href="Timer$.html"><span class="name deprecated" title="Deprecated: (Since version 1.1) Timers are replaced by the Clock API">Timer</span></a><span class="result"> extends <a href="Timer.html" class="extype" name="rummage.Timer">Timer</a></span>
       </span>
-      </h4>
-      <p class="comment cmt">Definitions associated with timers as well as the infrastructure for publishing the global implicit timer.</p>
+      </h4><span class="permalink">
+      <a href="../index.html#rummage.package@Timer" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Definitions associated with timers as well as the infrastructure for publishing the global implicit timer.</p><div class="fullcomment"><div class="comment cmt"><p>Definitions associated with timers as well as the infrastructure for publishing the global implicit timer.</p><p>This object publishes an implicit, lazily-initialized, global timer backed by a single daemon thread. It
+additionally implements <code>Timer</code> itself and forwards all task submissions to the aforementioned global timer.
+</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 1.1)</i> Timers are replaced by the Clock API</p></dd></dl></div>
     </li></ol>
             </div>
         </div>
@@ -317,6 +498,7 @@ artifact, but are too large, nuanced or handy to have around to be re-implemente
       <div id="tooltip"></div>
 
       <div id="footer">  </div>
-      <script defer="defer" type="text/javascript" id="jquery-js" src="../lib/jquery.js"></script><script defer="defer" type="text/javascript" id="jquery-ui-js" src="../lib/jquery-ui.js"></script><script defer="defer" type="text/javascript" id="tools-tooltip-js" src="../lib/tools.tooltip.js"></script><script defer="defer" type="text/javascript" id="template-js" src="../lib/template.js"></script>
+
+
     </body>
       </html>
